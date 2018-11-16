@@ -7,14 +7,17 @@
     <body>
         <header class="main-header">
           <nav class="main-navigation">
-              <a class="main-header-logo">
-                  <img src="img/index-logo.svg" width="368" height="153" alt="лого барбершоп Бородинский">
+              <!-- Прописали ссылке атрибут href, который при нажати на лого ведёт на главную страницу  -->
+              <a class="main-header-logo" href="index.html">
+                  <!-- Изменили логотип на другой вариант и изменили размер-->
+                  <img src="img/logo.svg" width="111" height="24" alt="лого барбершоп Бородинский">
               </a>
               <ul class="site-navigation">
                   <li><a href="info.html">Информация</a></li>
                   <li><a href="news.html">Новости</a></li>
                   <li><a href="price">Прайс-лист</a></li>
-                  <li><a href="shop">Магазин</a></li>
+                  <!--  К li добавили класс, который показывает, что этот пункт меню активен -->
+                  <li class="site-navigation-current"><a href="shop">Магазин</a></li>
                   <li><a href="shop">Контакты</a></li>
               </ul>
               <ul class="user-navigation">
@@ -24,102 +27,144 @@
         </header>
         
         <main class="container">
-            <h1>СРЕДСТВА ДЛЯ УХОДА</h1>
-            <div class="shop-navigation">
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="shop.html">Магазин</a></li>
-                    <li><a class="#">Средства для ухода</a></li>
-                </ul>
-            </div>
-            
-            <section class="brands">
-                <h2>ПРОИЗВОДИТЕЛИ:</h2>
-                <ul class="brands-list">
-                    <li><a class="brand-item" href="baxter-of-california.html">Baxter of California</a></li>
-                    <li><a class="brand-item" href="mr-natty.html">Mr Natty</a></li>
-                    <li><a class="brand-item" href="suavecito.html">Suavecito</a></li>
-                    <li><a class="brand-item" href="malin-goetz">Malin+Goetz</a></li>
-                    <li><a class="brand-item" href="murrays">Murray’s</a></li>
-                    <li><a class="brand-item" href="american-crew">American Crew</a></li>
-                </ul>
-            </section>
-            
-            <section class="products">
-                <h2>ГРУППЫ ТОВАРОВ:</h2>
-                <ul class="products-list">
-                    <li><a class="products-item" href="shaving-products.html">Бритвенные<br>принадлежности</a></li>
-                    <li><a class="products-item" href="skincare.html">Средства для ухода</a></li>
-                    <li><a class="products-item" href="accessories.html">Аксессуары</a></li>
-                </ul>
-            </section>
-            <a class="button" href="show-checked-items">Показать</a>
+            <h1 class="page-title">СРЕДСТВА ДЛЯ УХОДА</h1>
+            <!--  Меню по навигации из нескольких страниц называется "хлебные крошки"-->
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
+                <!--  Это текущая страница и ссылка не нужна, зато нужен класс это показывающий. У последнего эл-та в цепочке не может быть ссылки-->
+                <li class="breadcrumbs-current">Средства для ухода</li>
+            </ul>
+  
+            <section class="filters">
+                <h2 class="visually-hidden">Фильтр товаров</h2>
+                <!-- Здесь потом будут формы-->   
+            </section>               
             
             <section class="catalog">
-                <h2 class="visually-hidden">Каталог</h2>
-                <ul class="catalog-items">
-                    <li class="product-item">
-                        <img src="img/travel-kit-baxter-of-california" width="160" height="130" alt="Набор для путешествий «Baxter of California»">
-                        <p>
-                            Набор для путешествий<br>
-                            «Baxter of California»
+                <h2 class="visually-hidden">Список средств для ухода</h2>
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <!-- Сначала заголовок со ссылкой, разбитый на две части: категория и название -->
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Набор для путешествий</span>
+                                <span class="catalog-item-title">«Baxter of California»</span>
+                            </a>
+                        </h3>
+                        <p class="catalog-item-image">
+                            <!--   Клик по картинке должен вести на полноразмерную версию, поэтому оборачиваем в ссылку-->
+                            <a href="catalog-item.html">
+                                <img src="img/travel-kit-baxter-of-california.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+                            </a>
                         </p>
-                        <span class="price">2 900 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                        <p class="catalog-item-price">
+                            <b>2 900 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a>                        
+                        </p>                        
                     </li>
-                    <li class="product-item">
-                        <img src="img/moistyrising-conditioner-baxter-of-california" width="160" height="130" alt="Увлажняющий кондиционер «Baxter of California»">
-                        <p>
-                            Увлажняющий кондиционер<br>
-                            «Baxter of California»
+                    
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Увлажняющий кондиционер</span>
+                                <span class="catalog-item-title">«Baxter of California»</span>                            
+                            </a>                        
+                        </h3>                                               
+                        <p class="catalog-image">
+                            <a href="catalog-item.html">
+                                <img src="img/moisturising-conditioner-baxter-of-california.jpg" width="220" height="165" alt="Увлажняющий кондиционер «Baxter of California»">
+                            </a>                          
                         </p>
-                        <span class="price">750 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                        <p class="catalog-item-price">
+                            <b>750 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a>                       
+                        </p>                                                
                     </li>
-                    <li class="product-item">
-                        <img src="img/hair-gel-suavecito" width="160" height="130" alt="Гель для волос «SUAVECITO»">
-                        <p>
-                            Гель для волос<br>
-                            «SUAVECITO»
+                    
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Гель для волос</span>
+                                <span class="catalog-item-title">«SUAVECITO»</span>
+                            </a>                       
+                        </h3>
+                        <p class="catalog-image">
+                            <a href="catalog-item.html">
+                                <img src="img/hair-gel-suavecito.jpg" width="220" height="165" alt="Гель для волос «SUAVECITO»">
+                            </a>
                         </p>
-                        <span class="price">290 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                        <p class="catalog-price">
+                            <b>290 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a>
+                        </p>                 
                     </li>
-                    <li class="product-item">
-                        <img src="img/hair-clay-american-crew" width="160" height="130" alt="Глина для укладки волос «American crew»">
-                        <p>
-                            Глина для укладки волос<br>
-                            «American crew»
+                    
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Глина для укладки волос</span>
+                                <span class="catalog-item-title">«American crew»</span>                           
+                            </a>                       
+                        </h3>
+                        <p class="catalog-image">
+                            <a href="catalog-item.html">
+                                 <img src="img/hair-clay-american-crew.jpg" width="220" height="165" alt="Глина для укладки волос «AMERICAN CREW»">                           
+                            </a>                       
                         </p>
-                        <span class="price">500 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                        <p>
+                            <b>500 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a>
+                     
+                        </p>                 
                     </li>
-                    <li class="product-item">
-                        <img src="img/hair-gel-american-crew" width="160" height="130" alt="Гель для волос «AMERICAN CREW»">
+                    
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Гель для волос</span>
+                                <span class="catalog-item-title">«AMERICAN CREW»</span>
+                            </a>                       
+                        </h3>
+                        <p class="catalog-image">
+                            <a href="catalog-item.html">
+                                <img src="img/hair-gel-american-crew.jpg" width="220" height="165" alt="Гель для волос «AMERICAN CREW»">
+                            </a>                       
+                        </p>                       
                         <p>
-                            Гель для волос<br>
-                            «AMERICAN CREW»
-                        </p>
-                        <span class="price">300 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                            <b>300 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a>
+                        </p>                   
                     </li>
-                    <li class="product-item">
-                        <img src="img/shaving-kit-baxter-of-california" width="160" height="130" alt="Набор для бритья «Baxter of California»">
+                    
+                    <li class="catalog-item">
+                        <h3>
+                            <a href="catalog-item.html">
+                                <span class="catalog-category">Набор для бритья</span>
+                                <span class="catalog-item-title">«Baxter of California»</span>                           
+                            </a>                      
+                        </h3>
+                        <p class="catalog-image">
+                            <a href="catalog-item.html">
+                                <img src="img/shaving-kit-baxter-of-california.jpg" width="220" height="165" alt="Набор для бритья «Baxter of California»">
+                            </a>                     
+                        </p>                      
                         <p>
-                            Набор для бритья<br>
-                            «Baxter of California»
-                        </p>
-                        <span class="price">3 900 ₽</span>
-                        <a class="button" href="cart.html">КУПИТЬ</a>
+                            <b>3 900 ₽</b>
+                            <a class="button" href="#">КУПИТЬ</a> 
+                        </p>             
                     </li>
                 </ul>
             </section>
-            <div class="navigation-buttons">
-                <a class="button" href="page1.html">1</a>
-                <a class="button" href="#">2</a>
-                <a class="button" href="page3.html">3</a>
-                <a class="button" href="page4.html">4</a>
-            </div>    
+            
+            <!-- Это пагинация-->
+            <ul class="pagination-list">
+                <li class="pagination-item"><a href="#">1</a></li>
+                <!-- Пустая ссылка, т.к. мы на текущей странице. Но когда переключаемся - атрибут появится -->
+                <li class="pagination-item pagination-item-current"><a>2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+            </ul>    
         </main>
         
         <footer class="main-footer">
