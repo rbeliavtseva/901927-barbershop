@@ -2,23 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Барбершоп</title>
+    <title>Барбершоп Бородинский</title>
   </head>
   <body>
       <header class="main-header">
           <nav class="main-navigation">
               <a class="main-header-logo">
-                  <img src="img/index-logo.svg" width="368" height="153" alt="лого барбершоп Бородинский">
+                  <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
               </a>
               <ul class="site-navigation">
                   <li><a href="info.html">Информация</a></li>
                   <li><a href="news.html">Новости</a></li>
-                  <li><a href="price">Прайс-лист</a></li>
-                  <li><a href="shop">Магазин</a></li>
-                  <li><a href="shop">Контакты</a></li>
+                  <li><a href="price.html">Прайс-лист</a></li>
+                  <li><a href="catalog.html">Магазин</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
               </ul>
               <ul class="user-navigation">
-                  <li class="login-link">Вход</li>
+                  <li>
+                      <a class="login-link" href="login.html">Вход</a>
+                  </li>
               </ul>
           </nav> 
       </header>
@@ -60,10 +62,10 @@
           <section class="gallery">
               <h2>Фотогалерея</h2>
               <figure class="gallery-content">
-                      <a href="#"><img src="img/Layer_21.jpg" width="286" height="164" alt="Интерьер"></a>
+                  <a href="#"><img src="img/Layer_21.jpg" width="286" height="164" alt="Интерьер"></a>
               </figure>    
-              <span class="button gallery-button button-back">Назад</span>
-              <span class="button gallery-button button-next">Вперед</span>
+              <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+              <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
           </section>
           
           <section class="contacts">
@@ -85,9 +87,60 @@
           <section class="appointment">
               <h2>Записаться</h2>
               <p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-              <!-- Тут будет форма -->
+              <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="appointment-item">
+                      <label for="appontment-date">Дата</label>
+                      <input id="appontment-date" type="text" name="date" value="" placeholder="08.10.2017">
+                  </p>
+                  <p class="appointment-item">
+                      <label for="appointment-time">Время</label>
+                      <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+                  </p>
+                  <p class="appointment-item">
+                      <label for="appointment-name">Ваше имя</label>
+                      <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+                  </p>
+                  <p class="appointment-item">
+                      <label for="appointment-phone">Телефон</label>
+                      <input id="appointment-phone" type="text" name="phone" value="" placeholder="+7 123 456-78-90">
+                  </p>                                   
+                  <button class="button" type="submit">Отправить</button>             
+              </form>
           </section>
+          
+          <section class="modal modal-login">
+              <h2>Личный кабинет</h2>
+              <p>Введите пожалуйста свой логин и пароль</p>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                      <label class="visually-hidden" for="user-login">Логин</label>
+                      <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+                  </p>
+                  <p>
+                      <label class="visually-hidden" for="user-password">Пароль</label>
+                      <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+                  </p>
+                  <p class="login-password-info">
+                      <label class="login-checkbox">
+                          Запомните меня
+                          <input type="checkbox" name="remember" checked>
+                      </label>
+                      <a class="restore" href="#">Я забыл пароль!</a>
+                  </p>
+                  <button class="button" type="submit">Войти</button>
+              </form>
+              <button class="modal-close" type="button">Закрыть</button>
+          </section>
+          <section class="modal modal-map">
+              <h2 class="visually-hidden">Как до нас добраться</h2>
+              <p>
+                  <img src="img/map.jpg" width="780" height="560" alt="Офис компании 
+                    по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+              </p>
+              <button class="modal-close" type="button">Закрыть</button>  
+          </section>  
       </main>
+      
       <footer class="main-footer">
           <p class="footer-contacts">
               БАРБЕРШОП «БОРОДИНСКИЙ»<br>
